@@ -1,0 +1,31 @@
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; color: #222; }
+header { background: #2c3e50; color: #fff; padding: 16px 24px; }
+header h1 { margin: 0; font-size: 22px; }
+.subtitle { margin: 4px 0 0; color: #cbd5e1; font-size: 13px; }
+main { max-width: 960px; margin: 20px auto; padding: 0 16px; }
+.card { background: #fff; border-radius: 6px; padding: 16px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+.card h2 { margin-top: 0; font-size: 18px; }
+.card h3 { font-size: 15px; margin-bottom: 8px; }
+.toolbar { margin-bottom: 10px; }
+.toolbar button, #runBtn { margin-right: 6px; padding: 6px 10px; border: 1px solid #ccc; background: #eee; border-radius: 4px; cursor: pointer; }
+#runBtn { background: #2c3e50; color: #fff; border: none; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid #ddd; padding: 6px; text-align: center; }
+th { background: #f0f0f0; }
+td input { width: 90px; padding: 4px; }
+.error { color: #b00020; margin-top: 8px; white-space: pre-wrap; }
+.hint { font-size: 12px; color: #666; }
+label { margin-right: 16px; }
+#gantt { display: flex; height: 44px; border: 1px solid #333; margin: 8px 0; overflow: hidden; }
+.gantt-seg { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 12px; font-weight: bold; border-right: 1px solid #222; min-width: 24px; }
+.gantt-seg.idle { background: #bbb; color: #333; }
+.gantt-seg.p0 { background: #3498db; }
+.gantt-seg.p1 { background: #e67e22; }
+.gantt-seg.p2 { background: #2ecc71; }
+.gantt-seg.p3 { background: #9b59b6; }
+.gantt-seg.p4 { background: #e74c3c; }
+.gantt-seg.p5 { background: #1abc9c; }
+#averages { margin-top: 8px; font-weight: bold; }
+#summary { margin-bottom: 8px; }
+.removeBtn { padding: 2px 6px; cursor: pointer; }

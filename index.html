@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPU Scheduling Simulator</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>CPU Scheduling Simulator</h1>
+  <p class="subtitle">FCFS, SJF, SRTF and Round Robin on a single CPU</p>
+</header>
+
+<main>
+  <section class="card">
+    <h2>Processes</h2>
+    <div class="toolbar">
+      <button id="addBtn">Add process</button>
+      <button id="loadA">Load Workload A</button>
+      <button id="loadB">Load Workload B</button>
+      <button id="clearBtn">Clear</button>
+    </div>
+    <table id="procTable">
+      <thead>
+        <tr><th>PID</th><th>Arrival</th><th>Burst</th><th></th></tr>
+      </thead>
+      <tbody id="procBody"></tbody>
+    </table>
+    <p class="hint">IDs must be unique. Arrival times are nonnegative integers. Bursts are positive integers.</p>
+  </section>
+
+  <section class="card">
+    <h2>Settings</h2>
+    <label>Algorithm:
+      <select id="algo">
+        <option value="FCFS">FCFS</option>
+        <option value="SJF">SJF (non-preemptive)</option>
+        <option value="SRTF">SRTF (preemptive)</option>
+        <option value="RR">Round Robin</option>
+      </select>
+    </label>
+    <label>Time quantum (RR):
+      <input type="number" id="quantum" value="2" min="1" step="1">
+    </label>
+    <button id="runBtn">Run simulation</button>
+    <div id="error" class="error" hidden></div>
+  </section>
+
+  <section class="card" id="results" hidden>
+    <h2>Results</h2>
+    <div id="summary"></div>
+    <h3>Gantt chart</h3>
+    <div id="gantt"></div>
+    <p class="hint" id="ganttHint"></p>
+    <h3>Metrics</h3>
+    <table id="metricsTable">
+      <thead>
+        <tr><th>PID</th><th>Arrival</th><th>Burst</th><th>First start</th><th>Completion</th><th>Turnaround</th><th>Waiting</th><th>Response</th></tr>
+      </thead>
+      <tbody id="metricsBody"></tbody>
+    </table>
+    <div id="averages"></div>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
